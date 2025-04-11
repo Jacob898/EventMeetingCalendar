@@ -1,7 +1,11 @@
 package org.spring.eventcalendar.eventmeetingcalendarbackend.user;
 
+import org.springframework.stereotype.Service;
+
 import java.util.List;
 
+
+@Service
 public class UserService {
 
     public List<User> getUsers() {
@@ -10,6 +14,12 @@ public class UserService {
                         1L,
                         "Joe",
                         "Mama"
+                )
+                ,
+                new User(
+                        2L,
+                        "Ligma",
+                        "Kule"
                 )
         );
     }
