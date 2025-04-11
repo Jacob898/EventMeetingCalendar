@@ -1,25 +1,27 @@
 package org.spring.eventcalendar.eventmeetingcalendarbackend.event;
 
 import org.spring.eventcalendar.eventmeetingcalendarbackend.user.User;
+import org.springframework.cglib.core.Local;
 
+import java.time.LocalDateTime;
 import java.util.Collection;
 import java.util.Date;
 
 public class Event {
-    private String id;
+    private Long id;
     private String title;
     private String description;
     private String link;
     private Collection<User> participatingUsers;
-    private Date startDate;
-    private Date endDate;
+    private LocalDateTime startDate;
+    private LocalDateTime endDate;
     private User creator;
 
     public Event() {
 
     }
 
-    public Event(String title, String description, String link, Collection<User> participatingUsers, Date startDate, Date endDate, User creator) {
+    public Event(String title, String description, String link, Collection<User> participatingUsers, LocalDateTime startDate, LocalDateTime endDate, User creator) {
         this.title = title;
         this.description = description;
         this.link = link;
@@ -29,7 +31,7 @@ public class Event {
         this.creator = creator;
     }
 
-    public Event(String id, String title, String description, String link, Collection<User> participatingUsers, Date startDate, Date endDate, User creator) {
+    public Event(Long id, String title, String description, String link, Collection<User> participatingUsers, LocalDateTime startDate, LocalDateTime endDate, User creator) {
         this.id = id;
         this.title = title;
         this.description = description;
@@ -40,11 +42,11 @@ public class Event {
         this.creator = creator;
     }
 
-    public String getId() {
+    public Long getId() {
         return id;
     }
 
-    public void setId(String id) {
+    public void setId(Long id) {
         this.id = id;
     }
 
@@ -80,19 +82,19 @@ public class Event {
         this.participatingUsers = participatingUsers;
     }
 
-    public Date getStartDate() {
+    public LocalDateTime getStartDate() {
         return startDate;
     }
 
-    public void setStartDate(Date startDate) {
+    public void setStartDate(LocalDateTime startDate) {
         this.startDate = startDate;
     }
 
-    public Date getEndDate() {
+    public LocalDateTime getEndDate() {
         return endDate;
     }
 
-    public void setEndDate(Date endDate) {
+    public void setEndDate(LocalDateTime endDate) {
         this.endDate = endDate;
     }
 
